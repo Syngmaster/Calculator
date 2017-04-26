@@ -8,8 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@class CustomButton;
+
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *resultLabel;
+
+- (IBAction)buttonPressed:(UIButton *)sender;
+- (IBAction)equalButton:(UIButton *)sender;
+- (IBAction)operationButton:(UIButton *)sender;
+- (IBAction)clearButton:(UIButton *)sender;
+- (IBAction)negativeSignButton:(UIButton *)sender;
+- (IBAction)percentButton:(UIButton *)sender;
 
 @end
 
