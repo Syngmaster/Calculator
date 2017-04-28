@@ -46,11 +46,11 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2yR-lI-uxi" customClass="CustomButton">
                                                         <rect key="frame" x="94.5" y="0.0" width="92" height="96"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <state key="normal" title="%">
+                                                        <state key="normal" title="DEL">
                                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="percentButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eGP-qw-qjy"/>
+                                                            <action selector="deleteLastDigitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Aw0-MB-Lrg"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -148,7 +148,7 @@
                                             <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEl-wB-Qrw" customClass="CustomButton">
                                                 <rect key="frame" x="283" y="0.0" width="92" height="96"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <state key="normal" title="x">
+                                                <state key="normal" title="*">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
@@ -223,6 +223,9 @@
                                                 <state key="normal" title=".">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="dotSignButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JOD-pg-al5"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tV-yH-rJu" customClass="CustomButton">
                                                 <rect key="frame" x="188.5" y="0.0" width="92.5" height="96"/>

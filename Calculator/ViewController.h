@@ -19,7 +19,8 @@
 - (IBAction)operationButton:(UIButton *)sender;
 - (IBAction)clearButton:(UIButton *)sender;
 - (IBAction)negativeSignButton:(UIButton *)sender;
-- (IBAction)percentButton:(UIButton *)sender;
+- (IBAction)deleteLastDigitButton:(UIButton *)sender;
+- (IBAction)dotSignButton:(UIButton *)sender;
 
 @end
 
