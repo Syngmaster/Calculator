@@ -12,7 +12,7 @@
 
 - (void)printResultToLabel:(UILabel *) label {
     
-    label.text = [NSString stringWithFormat:@"%.10g",self.result];
+    label.text = [NSString stringWithFormat:@"%.15g",self.result];
     
 }
 
@@ -34,6 +34,7 @@
     if (self.resultFlag) {
         self.result = 0;
         self.resultFlag = NO;
+        self.hasDotSign = NO;
     }
 
     if (self.hasDotSign) {
@@ -43,15 +44,21 @@
         
         [self printResultToLabel:label];
         
+
+        if (button.tag == 0) {
+            
+            label.text = [NSString stringWithFormat:@"%.15g.%@",self.result, self.zeroNumber];
+            [self.zeroNumber appendString:@"0"];
+
+        }
+        
     } else {
         
         self.result = button.tag + self.result*10;
-        self.decimal = 0.1;
 
         [self printResultToLabel:label];
         
     }
- 
 }
 
 - (void)updateLabel:(UILabel *) label afterOperationWithButton:(UIButton *) button {
@@ -71,14 +78,13 @@
             case CalculatorOperationDivide:
                 self.result = self.number / self.result;
                 break;
-                
         }
     }
     
     if (button.tag == CalculatorOperationEquals) {
         
         self.operationFlag = NO;
-        
+
     } else {
         
         self.number = self.result;
@@ -88,9 +94,15 @@
         
     }
     
-    [self printResultToLabel:label];
-
-
+    if (self.result == INFINITY) {
+        
+        label.text = @"Error";
+        
+    } else {
+        
+        [self printResultToLabel:label];
+        
+    }
 }
 
 - (void)addOrRemoveNegativeSignToLabel:(UILabel *) label {
@@ -113,29 +125,29 @@
         [self printResultToLabel:label];
         
     }
-    
 }
 
 - (void)deleteLastDigitFromLabel:(UILabel *) label {
     
-    if (!self.hasDotSign) {
+    if (!self.hasDotSign && !self.resultFlag) {
         
         self.result = (int)self.result/10;
         
         [self printResultToLabel:label];
         
     }
-
 }
 
 - (void)addDotSignToLabel:(UILabel *) label {
     
     if (!self.hasDotSign) {
 
-        label.text = [NSString stringWithFormat:@"%.10g.",self.result];
+        label.text = [NSString stringWithFormat:@"%.15g.",self.result];
         
+        self.decimal = 0.1;
         self.hasDotSign = YES;
-    
+        self.zeroNumber = [NSMutableString stringWithString:@"0"];
+
     }
 
 }

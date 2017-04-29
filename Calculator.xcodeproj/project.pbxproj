@@ -15,6 +15,7 @@
 		DC29BA371EAFBBDD00AE3D2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC29BA351EAFBBDD00AE3D2D /* LaunchScreen.storyboard */; };
 		DC29BA431EAFE7C600AE3D2D /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DC29BA421EAFE7C600AE3D2D /* CustomButton.m */; };
 		DC29BABD1EB3772C00AE3D2D /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = DC29BABC1EB3772C00AE3D2D /* Calculator.m */; };
+		DC29BAC01EB39E5C00AE3D2D /* CustomLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC29BABF1EB39E5C00AE3D2D /* CustomLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		DC29BA421EAFE7C600AE3D2D /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
 		DC29BABB1EB3772C00AE3D2D /* Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
 		DC29BABC1EB3772C00AE3D2D /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
+		DC29BABE1EB39E5C00AE3D2D /* CustomLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLabel.h; sourceTree = "<group>"; };
+		DC29BABF1EB39E5C00AE3D2D /* CustomLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,8 @@
 				DC29BABC1EB3772C00AE3D2D /* Calculator.m */,
 				DC29BA411EAFE7C600AE3D2D /* CustomButton.h */,
 				DC29BA421EAFE7C600AE3D2D /* CustomButton.m */,
+				DC29BABE1EB39E5C00AE3D2D /* CustomLabel.h */,
+				DC29BABF1EB39E5C00AE3D2D /* CustomLabel.m */,
 				DC29BA2D1EAFBBDD00AE3D2D /* ViewController.h */,
 				DC29BA2E1EAFBBDD00AE3D2D /* ViewController.m */,
 				DC29BA301EAFBBDD00AE3D2D /* Main.storyboard */,
@@ -120,7 +125,7 @@
 				TargetAttributes = {
 					DC29BA231EAFBBDD00AE3D2D = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 4PMQKT6K8N;
+						DevelopmentTeam = 82NW4F7YY4;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -166,6 +171,7 @@
 				DC29BA2C1EAFBBDD00AE3D2D /* AppDelegate.m in Sources */,
 				DC29BA291EAFBBDD00AE3D2D /* main.m in Sources */,
 				DC29BABD1EB3772C00AE3D2D /* Calculator.m in Sources */,
+				DC29BAC01EB39E5C00AE3D2D /* CustomLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +291,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4PMQKT6K8N;
+				DEVELOPMENT_TEAM = 82NW4F7YY4;
 				INFOPLIST_FILE = Calculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ios.Calculator;
@@ -297,7 +303,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4PMQKT6K8N;
+				DEVELOPMENT_TEAM = 82NW4F7YY4;
 				INFOPLIST_FILE = Calculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ios.Calculator;

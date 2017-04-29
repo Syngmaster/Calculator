@@ -18,8 +18,23 @@
     self.layer.borderColor = [UIColor blackColor].CGColor;
     self.layer.cornerRadius = 10;
     
-
-    NSDictionary* attributesNormal = @{NSFontAttributeName: [UIFont systemFontOfSize:40],
+    UIFont *fontNormal;
+    UIFont *fontPressed;
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        
+        fontNormal = [UIFont fontWithName:@"Avenir" size:40];
+        fontPressed = [UIFont fontWithName:@"Avenir" size:35];
+        
+    } else if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        
+        fontNormal = [UIFont fontWithName:@"Avenir" size:70];
+        fontPressed = [UIFont fontWithName:@"Avenir" size:65];
+        
+    }
+    
+    
+    NSDictionary* attributesNormal = @{NSFontAttributeName: fontNormal,
                                   NSForegroundColorAttributeName: [UIColor whiteColor]};
     
     NSAttributedString* titleNormal = [[NSAttributedString alloc] initWithString:self.currentTitle attributes:attributesNormal];
@@ -30,7 +45,7 @@
     shadow.shadowColor = [UIColor  grayColor];
     shadow.shadowBlurRadius = 2.0;
     
-    NSDictionary* attributesPressed = @{NSFontAttributeName: [UIFont systemFontOfSize:35],
+    NSDictionary* attributesPressed = @{NSFontAttributeName: fontPressed,
                                         NSForegroundColorAttributeName: [UIColor whiteColor],NSShadowAttributeName : shadow};
     
     NSAttributedString* titlePressed = [[NSAttributedString alloc] initWithString:self.currentTitle attributes:attributesPressed];

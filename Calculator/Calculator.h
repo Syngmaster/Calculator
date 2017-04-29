@@ -25,6 +25,8 @@ typedef NS_ENUM(NSInteger, CalculatorOperation) {
 @property (assign, nonatomic) CGFloat result;
 @property (assign, nonatomic) CGFloat decimal;
 
+@property (strong, nonatomic) NSMutableString *zeroNumber;
+
 @property (assign, nonatomic) BOOL operationFlag;
 @property (assign, nonatomic) BOOL resultFlag;
 @property (assign, nonatomic) BOOL hasDotSign;
